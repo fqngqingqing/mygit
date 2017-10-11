@@ -1,0 +1,1083 @@
+
+<script  src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+<script  src="js/jquery-2.1.3.min.js" type="text/javascript" charset="utf-8"></script>
+<script  src="js/jquery.SuperSlide.2.1.1.js" type="text/javascript" charset="utf-8"></script>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/><meta name="format-detection" content="telephone=no, email=no"/>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+  <!--[if lt IE 9]>
+    <script type="text/javascript">
+        var str = "你的浏览器版本太low了,已经和时代脱轨了 :(";
+        var str2 = "推荐使用:<a href='https://www.baidu.com/s?ie=UTF-8&wd=%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8' target='_blank' style='color:blue;'>谷歌</a>,"
+                + "<a href='https://www.baidu.com/s?ie=UTF-8&wd=%E7%81%AB%E7%8B%90%E6%B5%8F%E8%A7%88%E5%99%A8' target='_blank' style='color:blue;'>火狐</a>,"
+                + "其他双核极速模式";
+        document.writeln("<pre style='text-align:center;color:#fff;background-color:#0cc; height:100%;border:0;position:fixed;top:0;left:0;width:100%;z-index:1234'>" +
+                "<h2 style='padding-top:200px;margin:0'><strong>" + str + "<br/></strong></h2><h2>" +
+                str2 + "</h2><h2 style='margin:0'><strong>如果你的使用的是双核浏览器,请切换到极速模式访问<br/></strong></h2></pre>");
+        document.execCommand("Stop");
+    </script>
+    <![endif]-->
+<style>
+@charset "utf-8";
+body,h1,h2,h4,h5,dd,ul,p,form,textarea,th,td,select{ margin: 0;padding: 0;}
+em { font-style: normal;}
+li {list-style: none;}
+a {text-decoration: none;color:#333333;}
+img {border: none;vertical-align: top;}
+table {border-collapse: collapse;}
+input,textarea {outline: none;}
+textarea {resize: none;overflow: auto;}
+body {font-size: 12px;font-family: "微软雅黑";}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+* {
+    transition: All 0.2s ease-in-out;
+    -webkit-transition: All 0.2s ease-in-out;
+    -moz-transition: All 0.2s ease-in-out;
+    -o-transition: All 0.2s ease-in-out;
+}
+图片响应式且居中img{display: block;max-width: 100%;height: auto;vertical-align: middle;margin-right: auto;margin-left: auto}
+a,input,textarea,li,b,.site-description,.site-title,.logo,.sub-menu li,.feature article,.block-content,.footer-icons span,.avatar,.popup,
+.overlay,.da-animate,.services article,#contactForm button,.form-hint,.porcon,.services h3,.pack-list article{ -moz-transition:ease-in-out 0.5s; 
+-webkit-transition:ease-in-out 0.5s; -o-transition:ease-in-out 0.5s; -ms-transition:ease-in-out 0.5s; transition:ease-in-out 0.5s; }
+.clear{clear:both;}
+tr td{display: table-cell;vertical-align: inherit;margin:0 10px;}
+table {display: table;border-collapse: separate; border-spacing: 2px;}
+#marqueediv1 img{margin-right:5px;}
+/*幻灯片*/
+.shuffling{position: absolute;top: 5px;width: 687px;height: 512px;background: #fff;border-radius: 15px;overflow: hidden;left: 10px;}
+.tab ul li{margin:4px;width:693px; height:507px;border-radius: 12px;overflow: hidden;}
+.tab ul li img{border-radius: 12px;}
+.nav{position: absolute;left: 50%;bottom:20px;margin-left:-40px;}
+.nav ul li{float:left;margin-left: 10px;width:20px;height: 20px;border-radius: 50%;background: #eee;line-height: 20px;text-align: center;cursor: pointer;}
+.nav ul li.on{background: #fa6176;}
+/*轮播*/
+.carousel_wrap{width:1180px;height:270px;overflow: hidden;}
+.carousel{margin: 10px auto;height: 270px;width: 1180px;}
+.carousel ul li{margin-right:2px;float:left;width:295px;height:270px;overflow: hidden;}
+.tempWrap{background:#fff;width: 1182px !important;height:272px !important;}
+/*点击图片放大*/
+.trans_wrap ul li>img{display: block;}
+.trans_wrap ul li{float: left;margin-right:30px;cursor: pointer;}
+.trans_wrap ul li{width:254px;height:236px;overflow: hidden;}
+.trans_wrap ul li>img,.trans_wrap ul li{width:254px;height:236px;overflow: hidden;transition: .6s ease all;-webkit-transition: .6s ease all;-moz-transition: .6s ease all;
+-ms-transition: .6s ease all;}
+.trans_wrap li:hover .img{-moz-transform: scale(1.1);-ms-transform: scale(1.1);-webkit-transform: scale(1.1);transform: scale(1.1);}
+
+/*点击图片放大的html*<div class="trans_wrap" style="position:absolute;left:77px;top:60px;">
+  <ul>
+    <li><img src="images/1-1.jpg" class="img"></li>
+    <li><img src="images/1-2.jpg" class="img"></li>
+    <li><img src="images/1-3.jpg" class="img"></li>
+  </ul>
+</div>*/
+</style>
+<!-- 手机海报开始-->
+// 判断某个object是否是数组
+        console.log(arr2 instanceof Array);
+<style>
+  .cover{
+    width:100%;
+    height:auto;
+  }
+  .cover img{
+    width:100%;
+    display:block;
+  }
+</style>
+  <div class="cover">
+     <img src="images/zbw_wap_01.jpg"  alt=""/>
+     <img src="images/zbw_wap_02.jpg"  alt=""/>
+     <img src="images/zbw_wap_03.jpg"  alt=""/>
+     <img src="images/zbw_wap_04.jpg"  alt=""/>
+     <img src="images/zbw_wap_05.jpg"  alt=""/>
+     <img src="images/zbw_wap_06.jpg"  alt=""/>
+     <img src="images/zbw_wap_07.jpg"  alt=""/>
+     <img src="images/zbw_wap_08.jpg"  alt=""/>
+     <img src="images/zbw_wap_09.jpg"  alt=""/>
+     <img src="images/zbw_wap_10.jpg"  alt=""/>
+     <img src="images/zbw_wap_11.jpg"  alt=""/>
+     <img src="images/zbw_wap_12.jpg"  alt=""/>
+     <img src="images/zbw_wap_13.jpg"  alt=""/>
+     <img src="images/zbw_wap_14.jpg"  alt=""/>
+     <img src="images/zbw_wap_15.jpg"  alt="" />
+     <img src="images/zbw_wap_16.jpg"  alt=""/>
+     <img src="images/zbw_wap_17.jpg"  alt=""/>
+     <img src="images/zbw_wap_18.jpg"  alt=""/>
+     <img src="images/zbw_wap_19.jpg"  alt=""/>
+     <img src="images/zbw_wap_20.jpg"  alt=""/>
+  </div>
+
+
+    <div class="form-control">
+        <label for="email">微信:</label>
+        <input id="email" name="email" type="text">
+    </div>
+<!-- 手机结束 -->
+  <!-- pc端海报 开始-->
+  <!-- <div style="margin: 0 auto; padding: 0; width: 100%;background:url(http://www.91jmw.com/dat/bbxj/images/bbxj_pc_bg2.jpg) no-repeat center top;"> -->
+<div style="margin: 0 auto; padding: 0; width: 100%;background:url(images/zjm_pc_bg.jpg) no-repeat center top;">
+    <div style="margin: 0 auto; padding: 0; width: 1200px;">
+        <div class="section"><img src="images/zjm_pc_01.jpg" width="1200" height="279" alt="炸酱面女孩加盟"></div>
+        <div class="section"><img src="images/zjm_pc_02.jpg" width="1200" height="279" alt="炸酱面女孩加盟"></div>
+        <div class="section"><img src="images/zjm_pc_03.jpg" width="1200" height="279" alt="炸酱面女孩加盟"></div>
+        <div class="section"><img src="images/zjm_pc_04.jpg" width="1200" height="279" alt="炸酱面女孩加盟"></div>
+        <div class="section"><img src="images/zjm_pc_05.jpg" width="1200" height="279" alt="炸酱面女孩加盟"></div>
+        <div class="section"><img src="images/zjm_pc_06.jpg" width="1200" height="279" alt="炸酱面女孩加盟"></div>
+        <div class="section"><img src="images/zjm_pc_07.jpg" width="1200" height="279" alt="炸酱面女孩加盟"></div>
+        <div class="section"><img src="images/zjm_pc_08.jpg" width="1200" height="279" alt="炸酱面女孩加盟"></div>
+        <div class="section"><img src="images/zjm_pc_09.jpg" width="1200" height="279" alt="炸酱面女孩加盟"></div>
+        <div class="section"><img src="images/zjm_pc_10.jpg" width="1200" height="279" alt="炸酱面女孩加盟"></div>
+        <div class="section"><img src="images/zjm_pc_11.jpg" width="1200" height="279" alt="炸酱面女孩加盟"></div>
+        <div class="section"><img src="images/zjm_pc_12.jpg" width="1200" height="279" alt="炸酱面女孩加盟"></div>
+        <div class="section"><img src="images/zjm_pc_13.jpg" width="1200" height="279" alt="炸酱面女孩加盟"></div>
+        <div class="section"><img src="images/zjm_pc_14.jpg" width="1200" height="279" alt="炸酱面女孩加盟"></div>
+        <div class="section"><img src="images/zjm_pc_15.jpg" width="1200" height="279" alt="炸酱面女孩加盟"></div>
+        <div class="section"><img src="images/zjm_pc_16.jpg" width="1200" height="279" alt="炸酱面女孩加盟"></div>
+        <div class="section"><img src="images/zjm_pc_17.jpg" width="1200" height="279" alt="炸酱面女孩加盟"></div>
+        <div class="section"><img src="images/zjm_pc_18.jpg" width="1200" height="279" alt="炸酱面女孩加盟"></div>
+        <div class="section"><img src="images/zjm_pc_19.jpg" width="1200" height="279" alt="炸酱面女孩加盟"></div>
+        <div class="section"><img src="images/zjm_pc_20.jpg" width="1200" height="279" alt="炸酱面女孩加盟"></div>
+        <div class="section"><img src="images/zjm_pc_21.jpg" width="1200" height="279" alt="炸酱面女孩加盟"></div>
+        <div class="section"><img src="images/zjm_pc_22.jpg" width="1200" height="279" alt="炸酱面女孩加盟"></div>
+        <div class="section"><img src="images/zjm_pc_23.jpg" width="1200" height="279" alt="炸酱面女孩加盟"></div>
+        <div class="section"><img src="images/zjm_pc_24.jpg" width="1200" height="279" alt="炸酱面女孩加盟"></div>
+        <div class="section"><img src="images/zjm_pc_25.jpg" width="1200" height="279" alt="炸酱面女孩加盟"></div>
+        <div class="section"><img src="images/zjm_pc_26.jpg" width="1200" height="279" alt="炸酱面女孩加盟"></div>
+        <div class="section"><img src="images/zjm_pc_27.jpg" width="1200" height="279" alt="炸酱面女孩加盟"></div>
+        <div class="section"><img src="images/zjm_pc_28.jpg" width="1200" height="279" alt="炸酱面女孩加盟"></div>
+        <div class="section"><img src="images/zjm_pc_29.jpg" width="1200" height="279" alt="炸酱面女孩加盟"></div>
+        <div class="section"><img src="images/zjm_pc_30.jpg" width="1200" height="279" alt="炸酱面女孩加盟"></div>
+        <div class="section"><img src="images/zjm_pc_31.jpg" width="1200" height="279" alt="炸酱面女孩加盟"></div>
+        <div class="section"><img src="images/zjm_pc_32.jpg" width="1200" height="279" alt="炸酱面女孩加盟"></div>
+    </div>
+</div>
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="1000" bgcolor="#FFFFFF">
+  <tbody>
+    <tr><td><img src="images/index_1.jpg"></td></tr>
+    <tr><td><img src="images/index_2.jpg"></td></tr>
+    <tr><td><img src="images/index_3.jpg"></td></tr>
+    <tr><td><img src="images/index_4.jpg"></td></tr>
+    <tr><td><img src="images/index_5.jpg"></td></tr>
+    <tr><td><img src="images/index_6.jpg"></td></tr>
+    <tr><td><img src="images/index_7.jpg"></td></tr>
+    <tr><td><img src="images/index_8.jpg"></td></tr>
+    <tr><td><img src="images/index_9.jpg"></td></tr>
+    <tr><td><img src="images/index_10.jpg"></td></tr>
+    <tr><td><img src="images/index_11.jpg"></td></tr>
+    <tr><td><img src="images/index_12.jpg"></td></tr>
+    <tr><td><img src="images/index_13.jpg"></td></tr>
+    <tr><td><img src="images/index_14.jpg"></td></tr>
+    <tr><td><img src="images/index_15.jpg"></td></tr>
+    <tr><td><img src="images/index_16.jpg"></td></tr>
+    <tr><td><img src="images/index_17.jpg"></td></tr>
+    <tr><td><img src="images/index_18.jpg"></td></tr>
+    <tr><td><img src="images/index_19.jpg"></td></tr>
+    <tr><td><img src="images/index_20.jpg"></td></tr>
+    <tr><td><img src="images/index_21.jpg"></td></tr>
+    <tr><td><img src="images/index_22.jpg"></td></tr>
+    <tr><td><img src="images/index_23.jpg"></td></tr>
+    <tr><td><img src="images/index_24.jpg"></td></tr>
+    <tr><td><img src="images/index_25.jpg"></td></tr>
+    <tr><td><img src="images/index_26.jpg"></td></tr>
+    <tr><td><img src="images/index_27.jpg"></td></tr>
+    <tr><td><img src="images/index_28.jpg"></td></tr>
+    <tr><td><img src="images/index_29.jpg"></td></tr>
+    <tr><td><img src="images/index_30.jpg"></td></tr>
+  </tbody>
+</table>
+  <!-- pc端海报 结束-->
+<!-- 轮播 -->
+  <div class="carousel_wrap" style="position:absolute;left:10px;top:10px;height:270px;width:1180px;">
+        <div class="carousel">
+          <ul>
+            <li><a href="javascript:;"><img src="images/5.jpg"></a></li>
+            <li><a href="javascript:;"><img src="images/6.jpg"></a></li>
+            <li><a href="javascript:;"><img src="images/7.jpg"></a></li>
+            <li><a href="javascript:;"><img src="images/8.jpg"></a></li>
+          </ul>
+        </div>
+      </div>
+  <script>
+  $(function(){
+    $(".carousel_wrap").slide({mainCell:".carousel ul",autoPlay:true,effect:"leftMarquee",vis:3,interTime:10});
+    $(".shuffling").slide({
+          titCell: ".nav ul",
+          mainCell: ".tab ul",
+          effect: "fade",
+          autoPlay: true,
+          autoPage:true    
+      });
+  });
+</script> 
+<!-- 轮播 -->
+<div id="marqueediv1" style="width:848px; height:180px; overflow:hidden; position:absolute; left: 78px; top: 18px;">
+  <table cellspacing="0" cellpadding="0" style="border-collapse:collapse;display:inline;">
+    <tbody>
+      <tr>
+          <td nowrap="true" style="white-space: nowrap;word-break:keep-all;">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+              <tbody>
+                <tr>
+                  <td><img src="images/shop_01.jpg" alt=""></td>
+                  <td><img src="images/shop_02.jpg" alt=""></td>
+                  <td><img src="images/shop_03.jpg" alt=""></td>
+                  <td><img src="images/shop_04.jpg" alt=""></td>
+                  <td><img src="images/shop_05.jpg" alt=""></td>
+                  <td><img src="images/shop_06.jpg" alt=""></td>
+                  <td><img src="images/shop_07.jpg" alt=""></td>
+                  <td><img src="images/shop_08.jpg" alt=""></td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  
+    <div class="section"><img src="images/zzgmp_19.jpg" width="1000" height="208" alt="赵征擀面皮加盟"></div>
+    <div class="section"><img src="images/zzgmp_20.jpg" width="1000" height="190" alt="赵征擀面皮加盟"></div>
+  </div>
+</div>  
+<script type="text/javascript" src="js/gd_pic.js"></script>
+<script type="text/javascript">
+window.onload = function(){
+var marquee1 = new Marquee("marqueediv1",2,1,848,180,10,10,50,50);
+}
+</script>
+//参数说明:
+//    ID    "marquee" 容器ID    (必选)
+//    Direction (0)   滚动方向  (可选,默认为0向上滚动) 可设置的值包括:0,1,2,3,"top","bottom","left","right" (0向上 1向下 2向左 3向右)
+//    Step    (1)   滚动的步长 (可选,默认值为2,数值越大,滚动越快)
+//    Width   (760)   容器可视宽度  (可选,默认值为容器初始设置的宽度)
+//    Height    (52)    容器可视高度  (可选,默认值为容器初始设置的高度)
+//    Timer   (50)    定时器   (可选,默认值为30,数值越小,滚动的速度越快,1000=1秒,建议不小于20)
+//    DelayTime (5000)    间歇停顿延迟时间(可选,默认为0不停顿,1000=1秒)
+//    WaitTime  (3000)    开始时的等待时间(可选,默认或0为不等待,1000=1秒)
+//    ScrollStep  (52)    间歇滚动间距  (可选,默认为翻屏宽/高度,该数值与延迟均为0则为鼠标悬停控制,-1禁止鼠标控制)
+window.onload=function(){
+<!-- 漂浮 -->
+<script  src="js/floating-ad.js" type="text/javascript" charset="utf-8"></script>
+<div class="float" id="gg1" style="z-index: 9999; position:absolute;top: 0px;right:0px;width:;height: ;">
+      <a href="" target="_blank"><img src="http://www.91jmw.com/dat/mlh/images/31.jpg"></a>
+          <p class="hold">关闭</p>
+</div>
+
+<script type="text/javascript">
+
+        var ad1=new AdMove("gg1");
+        ad1.Run();
+    $(".hold").click(function(){
+       $(".float").fadeOut();
+      });
+</script>
+<!-- .5里wap端需添加的内容 -->
+      <script>
+      (function() {
+        var _53code = document.createElement("script");
+        _53code.src = "//tb.53kf.com/code/code/10117970/8";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(_53code, s);
+      })();
+      </script>
+
+<!-- .5里pc端需添加的内容 -->
+<script>
+(function() {
+  var _53code = document.createElement("script");
+  _53code.src = "//tb.53kf.com/code/code/10117970/8";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(_53code, s);
+})();
+</script>
+<script>document.write(decodeURI("%3Cscript src='http://91jmw.liansuo.com/index.php/gbook/gs/1229/1353/%E7%BE%8E%E5%8D%9A%E5%A3%AB%EF%BC%88%E5%B9%BF%E5%91%8A%E4%BD%8D%EF%BC%89' type='text/javascript'%3E%3C/script%3E"));</script>
+ <!--#include virtual='/beianhao.php'-->
+
+ 
+<!-- 放header前面的内容 -->
+
+<!--#include virtual="/assets.php"-->
+<script>
+    qid=1353;
+</script>
+  <!-- 放body下的内容 -->
+
+  <!--#include virtual="/recommend.php"-->
+
+  <script>//处理手机适配
+    var phoneWidth = parseInt(window.screen.width);
+    var phoneScale = phoneWidth / 640;
+    var ua = navigator.userAgent;
+    if (/Android (\d+\.\d+)/.test(ua)) {
+      var version = parseFloat(RegExp.$1);
+      if (version > 2.3) {
+        document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+      } else {
+        document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+      }
+    } else {
+      document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+    }
+  </script>
+   <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+        <!-- http://sg.abongta.com/kldmx-m/ -->
+            <div class="swiper-slide"><a href="{:U('Index/koala')}" target="blank"><img src="__ROOT__/Home/style/img/banner3.jpg"/></a></div>
+            <div class="swiper-slide"><img src="__ROOT__/Home/style/img/banner1.jpg"/></div>
+            <div class="swiper-slide"><img src="__ROOT__/Home/style/img/banner2.jpg"/></div>
+
+            
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="__ROOT__/Home/style/js/swiper.min.js"></script>
+    <link rel="stylesheet" href="__ROOT__/Home/style/css/swiper.min.css"/>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {      
+        pagination: '.swiper-pagination',       
+        paginationClickable: true,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false
+    });
+    </script>
+
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        paginationClickable: true,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false
+    });
+    $('#myCarousel').carousel({
+    interval: 2000
+})
+    $('#myCarouse').carousel({
+    interval: 2000
+})
+</script>
+//页面响应式幻灯片(引入flexslide.css)
+<div class="slider">
+    <div class="flexslider">
+        <div class="flex-show"></div>
+        <div class="flex-viewport">
+            <ul class="slides">
+                <li><img src="images/banner1.jpg" alt=""></li>
+                <li><img src="images/banner1.jpg" alt=""></li>
+                <li><img src="images/banner1.jpg" alt=""></li>
+            </ul>
+        </div>
+            <ol class="flex-control-nav flex-control-paging">
+            
+            </ol>
+            <ul class="flex-direction-nav">
+                <li><a class="flex-prev icon-angle-left" href="#"></a></li>
+                <li><a class="flex-next icon-angle-right" href="#"></a></li>
+            </ul>
+    </div>
+</div>  
+<script  src="js/jquery.flexslider.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(window).load(function(){
+            $(".flex").removeData("flexslider");
+            $('.flexslider').flexslider({
+                animation: "auto",
+                start: function(slider){
+                    $('body').removeClass('loading');
+                }
+          });
+        });
+    </script>
+
+slide插件
+
+<div class="banner_box container">
+  <div class="banner_wrap">
+    <ul>
+      <li style="display:block;"><a href="javascript:;"><img src="images/banner1 (1).jpg"></a></li>
+      <li style="display: none;"><a href="javascript:;"><img src="images/banner1 (2).jpg"></a></li>
+      <li style="display:none"><a href="javascript:;"><img src="images/banner1 (3).jpg"></a></li>
+    </ul>
+    <div class="tab_bar">
+    <ul>
+    
+    </ul>
+    </div>
+  </div>
+  <a class="prev arrow-left" href="javascript:void(0)"></a>
+  <a class="next arrow-right" href="javascript:void(0)"></a>
+</div>
+
+slide样式
+<style>
+.banner_box{position: relative;}
+.banner_wrap{width:100%;overflow: hidden;}
+.banner_wrap li,.banner_wrap li img{width: 100%;display: table-cell;vertical-align: middle;text-align: center;}
+.banner_wrap li{width: 100%;float: left;}
+
+.tab_bar {position: absolute;left: 50%;text-align: center;bottom: 50px;width: 100%;z-index: 999;margin-left: -75px}
+.tab_bar li{display: inline-block;width: 50px;height: 4px;margin: 0 3px;cursor: pointer;background: #fff;font-size: 0}
+.tab_bar li.on{background: #000}
+
+.arrow-left {margin-top: -36px;display: block;left: 20px;top: 50%;position: absolute;width: 52px;height:72px;background: url(../images/arrow.png) no-repeat 0 0;}
+.arrow-right {margin-top: -36px;display: block;right: 20px;top: 50%;position: absolute;width: 52px;height: 72px;background: url(../images/arrow.png) no-repeat 0 -81px;}
+</style>
+
+slide js
+$(".banner_box").slide({mainCell:".banner_wrap ul",titCell:".tab_bar ul",autoPlay:true,autoPage:true})
+</body>
+</html>
+数组验重
+// 方法2:(创建一个结果数组，用indexOf)
+$(function(){
+    var arr=[1,2,5,3,2,3,4,5,8,8,9,9,8,6,5,1111,111];
+    var arr2=[];
+    for(var i=0;i<arr.length;i++){
+        if(arr2.indexOf(arr[i])===-1){
+            arr2.push(arr[i]);
+        }
+    }
+    // return arr2;
+    arr2.sort(function(a,b){
+        return a-b;
+    });
+    console.log(arr2)
+});
+//在线留言验证{姓名，电话，地址 留言}(form表单提交)
+<script>
+    $(".submit-btn").click(function(){
+        var xingming = $("#message_name").val();
+        var dianhua = $("#message_phone").val();
+        var neirong = $("#message_neirong").val();
+        var email = $("#message_email").val();
+        xingming = $.trim(xingming);
+        dianhua = $.trim(dianhua);
+        neirong = $.trim(neirong);
+        email = $.trim(email);
+        var err = 0;
+        var _html = "";
+        if(xingming.length == 0)
+        {
+            $("#message_name").addClass("nav_input");
+            err = 1;
+            _html += "姓名不能为空\r";
+        }else
+        {
+            $("#message_name").removeClass("nav_input");
+        }
+        if(dianhua.length == 0)
+        {
+            $("#message_phone").addClass("nav_input");
+            err = 1;
+            _html += "联系方式不能为空\r";
+        }else
+        {
+            $("#message_phone").removeClass("nav_input");
+        }
+        if(neirong.length == 0)
+        {
+            $("#message_neirong").addClass("nav_input");
+            err = 1;
+            _html += "内容不能为空\r";
+        }else if(neirong.length < 5)
+        {
+            $("#message_neirong").addClass("nav_input");
+            err = 1;
+            _html +="内容不能少于五个字\r";
+        }else
+        {
+            $("#message_neirong").removeClass("nav_input");
+        }
+        /*if(email.length > 0)
+        {
+            var filter = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/;
+            if (!filter.test(email))
+            {
+                $("#message_email").addClass("nav_input");
+                err = 1;
+                _html +="邮箱不合法";
+            }else
+            {
+                $("#message_email").removeClass("nav_input");
+            }
+        }*/
+        if(err == 0)
+        {
+            $(this).text("提交中...");
+            $.post("/content/ajaxmessage.html", { "xingming": xingming, "dianhua": dianhua, "neirong": neirong,"email":email }, function(data){
+                 if(data.info == 1)
+                 {
+                    $(".submit-btn").text("提交");
+                    $("#message_name").val('');
+                    $("#message_phone").val('');
+                    $("#message_neirong").val('');
+                    $("#message_email").val('');
+                    alert("留言成功");
+                 }else
+                 {
+                    alert("系统繁忙, 请稍后重试");
+                 }
+               }, "json");
+        }else
+        {
+            alert(_html);
+        }   
+    });
+  </script>
+<script>
+   var speed=50
+   demo2.innerHTML=demo1.innerHTML
+   function Marquee(){
+   if(demo2.offsetTop-demo.scrollTop<=0)
+   demo.scrollTop-=demo1.offsetHeight
+   else{
+   demo.scrollTop++
+   }
+   }
+   var MyMar=setInterval(Marquee,speed)
+   demo.onmouseover=function() {clearInterval(MyMar)}
+   demo.onmouseout=function() {MyMar=setInterval(Marquee,speed)};
+</script>
+$(".shangquan li").click(function(){
+    var array=[];
+    var html=""
+    if($(this).hasClass("active")){
+        $(this).removeClass("active")
+    }else{
+        text1=$(this).text();
+        $(".sqinput").html("");
+        if($(".selemenu").find(".csinput").size()>3){
+           alert("最多只能选三个")
+        }else{
+            html+='<span class="csinput">'+text1+'</span>';
+                    array.push(html);
+            $(".selemenu").append(html);
+                $(this).addClass("active");
+            } 
+        }
+        
+})
+<script>
+  var id_val=$("#message_id").val();
+  var arr=[];
+  var arr1=[];
+  var arr2=[];
+  var arr3=[];
+  var arr4=[];
+    $(document).on("click",".banner",function(){
+      // var project_check=$(this).find(".pingpai").text().slice(5,-4);
+        var _this=$(this);
+        // var checked=$(this).find(".check");
+        var start_num=$(this).find(".start");
+        var html="";
+        var start="";
+        var start_l=""
+        var platform='';
+        var html2=""
+       var project_check=''
+        var num=$(this).find("i");
+       if($(this).hasClass("bg_red")){
+            $(this).removeClass("bg_red").addClass("bg_or");
+               html=_this.find("i").text();
+               start=start_num.text().slice(1,2);
+               start_l=start_num.text().slice(0,1);
+               platform=$(this).find("em").text();
+               project_check=$(this).find(".pingpai").text().slice(5,-4);
+                html2='<span class="checkedddd">'+project_check+'<b class="icon clear_button" id="clear"></b></span>'
+           
+                arr.push(html);
+                arr1.push(start);
+                arr2.push(start_l);
+                arr3.push(platform);
+                arr4.push(project_check);
+                console.log(arr4);
+                $("#message_id").val(arr);
+                $("#message_level").val(arr1);
+                $("#message_type").val(arr2);
+                $("#message_site").val(arr3);
+                $(".checkedddd_wrap").append(html2);
+        }else{
+            $(this).removeClass("bg_or").addClass("bg_red");
+            html=_this.find("i").text();
+            start=start_num.text().slice(1,2);
+             start_l=start_num.text().slice(0,1);
+             platform=$(this).find("em").text();
+             project_check=$(this).find(".pingpai").text().slice(5,-4);
+             
+            var index=$.inArray(html,arr);
+            var index1=$.inArray(start,arr1);
+            var index2=$.inArray(start_l,arr2);
+            var index3=$.inArray(platform,arr3);
+            var index4=$.inArray(project_check,arr4);
+              arr.splice(index,1)
+                arr1.splice(index1,1);
+                arr2.splice(index2,1);
+                arr3.splice(index3,1);
+                arr4.splice(index4,1);
+                $("#message_id").val(arr);
+                $("#message_level").val(arr1);
+                $("#message_type").val(arr2);
+                $("#message_site").val(arr3);
+                // $(".checkedddd_wrap").html(arr4)
+                $(document).find(".checkedddd").eq(index4).remove();
+            }
+    });
+    $(document).find("#clear").click(function(){
+      console.log(9)
+      $(this).parent("span").remove();
+      $(this).closest(".banner").removeClass("bg_or");
+    })
+   
+</script>
+<div class="checked_prject" style="margin-left: 50px;line-height: 30px;">
+    <span class="checkedd">选中的项目&nbsp;:</span>
+    <div class="checkedddd_wrap">
+      <!-- <span class="checkedddd">已选择<i class="icon clear_button"></i></span> -->
+    </div>
+</div>   
+
+<script type="text/javascript" src="images/gd_pic.js.下载"></script>
+<script type="text/javascript">
+//参数说明:
+//      ID      "marquee"   容器ID        (必选)
+//      Direction   (0)     滚动方向    (可选,默认为0向上滚动) 可设置的值包括:0,1,2,3,"top","bottom","left","right" (0向上 1向下 2向左 3向右)
+//      Step        (1)     滚动的步长   (可选,默认值为2,数值越大,滚动越快)
+//      Width       (760)       容器可视宽度  (可选,默认值为容器初始设置的宽度)
+//      Height      (52)        容器可视高度  (可选,默认值为容器初始设置的高度)
+//      Timer       (50)        定时器     (可选,默认值为30,数值越小,滚动的速度越快,1000=1秒,建议不小于20)
+//      DelayTime   (5000)      间歇停顿延迟时间(可选,默认为0不停顿,1000=1秒)
+//      WaitTime    (3000)      开始时的等待时间(可选,默认或0为不等待,1000=1秒)
+//      ScrollStep  (52)        间歇滚动间距  (可选,默认为翻屏宽/高度,该数值与延迟均为0则为鼠标悬停控制,-1禁止鼠标控制)
+window.onload=function(){
+var marquee1 = new Marquee("marqueediv1",2,1,780,180,10,10,50,50);
+}
+</script>
+
+
+
+
+在单页面且是个展示型的页面情况下，可以用media来做页面的自适应
+在页面复杂的情况下，需要做两个页面来做wap端和pc端
+判断是手机访问还是电脑访问
+<script>//移动端自动跳转
+    var mob_url = "http://wap.ayy99.com/";
+</script>
+<script>
+if (typeof(mob_url) != 'undefined'){
+    if(mob_url!=''){
+        browserRedirect(mob_url);
+    }   
+}
+//识别手机还是电脑
+function browserRedirect(mob_url){ 
+    var sUserAgent= navigator.userAgent.toLowerCase(); 
+    var bIsIpad= sUserAgent.match(/ipad/i) == "ipad"; 
+    var bIsIphoneOs= sUserAgent.match(/iphone os/i) == "iphone os";
+    var bIsMidp= sUserAgent.match(/midp/i) == "midp"; 
+    var bIsUc7= sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";    
+    var bIsUc= sUserAgent.match(/ucweb/i) == "ucweb"; 
+    var bIsAndroid= sUserAgent.match(/android/i) == "android"; 
+    var bIsCE= sUserAgent.match(/windows ce/i) == "windows ce";
+    var bIsWM= sUserAgent.match(/windows mobile/i) == "windows mobile";
+    if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM){
+        window.location.href = mob_url;
+    }
+}
+</script>
+
+<!-- 王牌pc端 模板-->
+Pc:
+<script>
+    //项目ID
+    var projectID = 8657;
+</script> 
+<!-- 头部 -->
+<!--#include virtual="/html/header/jjproject_page_header.html"-->
+<!-- 头部结束 -->
+<!--#include virtual="/html/header/jjproject_frame_header.html"-->
+<!--内容部分-->
+<table id="__01" align="center" border="0" cellpadding="0" cellspacing="0">
+    <tbody><tr>
+        <td>
+            <img src="images/index_01.jpg" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_02.jpg" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_03.jpg" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_04.jpg" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_05.jpg" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_06.jpg" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_07.jpg" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_08.jpg" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_09.jpg" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_10.jpg" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_11.jpg" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_12.jpg" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_13.jpg" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_14.jpg" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_15.jpg" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_16.jpg" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_17.jpg" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_18.jpg" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_19.jpg" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_20.jpg" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_21.jpg" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_22.jpg" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_23.jpg" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_24.jpg" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_25.jpg" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_26.jpg" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_27.jpg" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_28.jpg" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_29.jpg" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_30.jpg" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_31.jpg" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_32.jpg" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_33.jpg" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_34.jpg" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_35.jpg" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_36.jpg" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_37.jpg" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_38.jpg" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_39.jpg" alt=""></td>
+    </tr>
+        <tr>
+        <td>
+            <img src="images/index_40.jpg" alt=""> </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_41.jpg" alt=""></td>
+    </tr>
+
+</tbody></table>
+<!--内容部分结束-->
+<!--留言板代码-->
+<!--#include virtual="/html/gbook/project_jjpage_gbook.html"-->
+<!--留言板代码END -->
+<!--#include virtual="/html/footer/jjproject_frame_footer.html"-->
+<!--版权-->
+<!--#include virtual="/html/footer/jjproject_page_footer.html"-->
+<!--版权END-->
+
+
+
+
+<!-- 王牌手机端模板-->
+
+Wap:
+<script>
+var projectID = 【改成对应项目ID】;
+</script>
+    <!-- 头部 -->
+<!--#include virtual="/html/header/wap_header.html"-->
+    <!-- 头部结束 -->
+<!--内容部分-->
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" id="__01">
+<tbody>
+    <tr>
+        <td>
+            <img src="images/index_01.jpg" width="100%" alt="">
+        </td>
+  </tr>
+    <tr>
+        <td>
+            <img src="images/index_02.jpg" width="100%" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_03.jpg" width="100%" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_04.jpg" width="100%" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_05.jpg" width="100%" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_06.jpg" width="100%" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_07.jpg" width="100%" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_08.jpg" width="100%" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_09.jpg" width="100%" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_10.jpg" width="100%" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_11.jpg" width="100%" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_12.jpg" width="100%" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_13.jpg" width="100%" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_14.jpg" width="100%" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_15.jpg" width="100%" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_16.jpg" width="100%" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_17.jpg" width="100%" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_18.jpg" width="100%" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_19.jpg" width="100%" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_20.jpg" width="100%" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_21.jpg" width="100%" alt="">
+        </td>
+  </tr>
+    <tr>
+        <td>
+            <img src="images/index_22.jpg" width="100%" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_23.jpg" width="100%" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_24.jpg" width="100%" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_25.jpg" width="100%" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_26.jpg" width="100%" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_27.jpg" width="100%" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_28.jpg" width="100%" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_29.jpg" width="100%" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_30.jpg" width="100%" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_31.jpg" width="100%" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_32.jpg" width="100%" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_33.jpg" width="100%" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_34.jpg" width="100%" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_35.jpg" width="100%" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_36.jpg" width="100%" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_37.jpg" width="100%" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_38.jpg" width="100%" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_39.jpg" width="100%" alt=""></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="images/index_40.jpg" width="100%" alt=""></td>
+    </tr>
+</tbody>
+</table>
+<!--内容部分结束-->
+<!--留言板代码-->
+<!--#include virtual="/html/gbook/wap_gbook.html"-->
+<!--留言板代码END -->
+<!--版权-->
+<!--#include virtual="/html/footer/wap_page_footer.html"-->
+<!--版权END-->
+<!--底部浮动代码-->
+<!--#include virtual="/html/footer/wap_page_fd.html"-->
+<!--底部浮动代码 END-->
+
+
+<script>(function() {var _53code = document.createElement("script");_53code.src = "https://tb.53kf.com/code/code/10158948/6";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(_53code, s);})();</script> 
